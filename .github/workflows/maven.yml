@@ -25,4 +25,3 @@ jobs:
         run: |
           mvn tomcat:deploy -DskipTests -f ./SpringProjectForJenkins/pom.xml || \
           mvn tomcat:redeploy -DskipTests -f ./SpringProjectForJenkins/pom.xml
-      
