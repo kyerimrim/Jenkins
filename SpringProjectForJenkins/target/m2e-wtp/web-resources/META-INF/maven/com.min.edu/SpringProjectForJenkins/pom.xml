@@ -264,8 +264,8 @@
 				<configuration>
 					<url>https://bd7c-14-36-141-71.ngrok-free.app/manager/text</url>
 					<path>/${project.build.finalName}</path>
-					<username>my</username>
-					<password>my</password>
+					<username>tomcat</username>
+					<password>tomcat</password>
 				</configuration>
 			</plugin>
 			 
