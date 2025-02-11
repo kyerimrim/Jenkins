@@ -18,6 +18,7 @@
 		<h3>수정하기</h3>
 		<h3>수업 수정하기</h3>
 		<h3>git action / pom.xml 추가 및 변경 수업</h3>
+		<h3>actio 동작</h3>
 	</div>
 </body>
 </html>
