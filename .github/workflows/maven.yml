@@ -1,0 +1,27 @@
+name: Java CI with Maven
+
+on:push:
+branches: [ "main" ]
+pull_request:
+branches: [ "main" ]
+
+jobs:build:
+runs-on: ubuntu-latest
+
+    steps:- uses: actions/checkout@v4
+
+    - name: Set up JDK 17uses: actions/setup-java@v4
+with:
+java-version: '17'
+distribution: 'temurin'
+cache: maven
+
+    - name: Build with Mavenrun: mvn clean install -DskipTests -f ./SpringProjectForJenkins/pom.xml
+
+    - name: Deploy to Tomcat Serverrun: |
+mvn tomcat:deploy -DskipTests -f ./SpringProjectForJenkins/pom.xml || \
+mvn tomcat:redeploy -DskipTests -f ./SpringProjectForJenkins/pom.xml
+env:
+TOMCAT_USERNAME: tomcat
+TOMCAT_PASSWORD: tomcat
+TOMCAT_URL: 'https://bd7c-14-36-141-71.ngrok-free.app/manager/text'
